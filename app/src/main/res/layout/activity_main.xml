@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- 로고 이미지 -->
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/layer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/logo_image"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to \nBlue Gate!"
+                android:textColor="#254386"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:id="@+id/my_pet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My pet"
+                android:textColor="#4B4B4B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/pet_name"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/rounded_rec"
+                        android:gravity="center|top"
+                        android:padding="7dp"
+                        android:text="@string/pet_name"
+                        android:textColor="#4B4B4B" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="98dp"
+                        android:layout_height="84dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/dog1" />
+
+                    <ImageButton
+                        android:id="@+id/plus_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_toEndOf="@id/pet_name"
+                        android:background="@drawable/plus_button"
+                        android:padding="10dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+
+        <!-- 알림, 메뉴 아이콘-->
+        <ImageButton
+            android:id="@+id/notice_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notice_icon" />
+
+        <ImageButton
+            android:id="@+id/menu_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menu_icon" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layer1"
+        android:layout_marginStart="16dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/my_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Product"
+            android:textColor="#4B4B4B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/door"
+                android:layout_width="355dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/rounded_rec"
+                android:padding="10dp"
+                android:text="         Pet Door"
+                android:textColor="#686868"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/door_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="30dp"
+                android:text="Opened"
+                android:textColor="#686868" />
+
+            <Switch
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="250dp"
+                android:checked="true"
+                android:textColor="#686868"
+                android:textStyle="bold"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track_backgrounds"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/door"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layer2"
+        android:layout_marginStart="16dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop"
+            android:textColor="#4B4B4B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Use a parent LinearLayout with horizontal orientation to place LinearLayouts side by side -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="35dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingRight="50dp"> <!-- Add some spacing between the two shops -->
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/rounded_rec"
+                    android:src="@drawable/shop1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Automatic pet doors"
+                    android:textColor="#4B4B4B"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$1099"
+                    android:textColor="#4B4B4B"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/rounded_rec"
+                    android:src="@drawable/shop2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Pet Recognition Camera"
+                    android:textColor="#4B4B4B"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$354"
+                    android:textColor="#4B4B4B"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
